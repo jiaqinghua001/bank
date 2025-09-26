@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>银行简介 - 四川银行</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+            touch-action: manipulation;
+        }
+        body {
+            background-color: #f0f8f0;
+            color: #333;
+            padding-bottom: 30px;
+        }
+        /* 返回首页按钮 */
+        .back-btn {
+            display: inline-block;
+            margin: 10px 0 10px 15px;
+            padding: 10px 20px;
+            background-color: #4682b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .back-btn:active {
+            background-color: #3a6d98;
+        }
+        .back-btn i {
+            margin-right: 6px;
+        }
+        /* 顶部大标题栏 */
+        .top-title-bar {
+            background-color: #2e4c6d;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+        }
+        /* 四川银行标志栏 */
+        .scb-logo-bar {
+            background-color: #004a9f;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+        .scb-logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .scb-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        /* 内容容器 */
+        .content-container {
+            background-color: #fff;
+            padding: 15px;
+            margin: 0 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        /* 文字内容样式 */
+        .intro-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+        .intro-text p {
+            margin-bottom: 15px;
+        }
+        /* 图片样式：优化手机端显示 */
+        .float-image {
+            width: 42%; /* 减小宽度以适应手机屏幕 */
+            max-width: 200px; /* 限制最大宽度 */
+            height: auto;
+            border-radius: 12px; /* 适度圆角 */
+            margin: 5px; /* 减小边距 */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        /* 响应式调整：小屏幕时图片宽度自适应 */
+        @media (max-width: 360px) {
+            .float-image {
+                width: 40%;
+            }
+        }
+        .image-right {
+            float: right;
+        }
+        .image-left {
+            float: left;
+        }
+        /* 图片注释 */
+        .image-caption {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0 15px 0;
+            clear: both; /* 确保注释在图片下方 */
+        }
+        /* 底部信息栏：蓝色背景 */
+        .bottom-info {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            background-color: #004a9f;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px 8px 0 0;
+            clear: both; /* 确保在图片下方 */
+        }
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+        }
+        .info-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .info-text p {
+            margin: 0 0 5px 0;
+        }
+        /* 底部曲线装饰 */
+        .content-container::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: url("{{ url_for('static', filename='images/curve.png') }}") no-repeat center bottom;
+            background-size: 100% 100%;
+        }
+        /* 标语：右对齐+深蓝色 */
+        .slogan {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            color: #004a9f;
+            margin: 10px 15px 5px 0;
+        }
+        /* 底部联系信息 */
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 15px 10px;
+            font-size: 13px;
+            color: #666;
+            flex-wrap: wrap;
+        }
+    </style>
+    <!-- 引入FontAwesome图标 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 返回首页按钮 -->
+    <a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> 返回首页</a>
+    
+    <!-- 顶部大标题栏 -->
+    <div class="top-title-bar">
+        1、银行简介
+    </div>
+    
+    <!-- 四川银行标志栏 -->
+    <div class="scb-logo-bar">
+        <img src="{{ url_for('static', filename='images/scb_logo.jpg') }}" alt="SCB标志" class="scb-logo">
+        <span class="scb-name">四川银行</span>
+    </div>
+    
+    <!-- 内容容器 -->
+    <div class="content-container">
+        <div class="intro-text">
+            <p>四川银行成立于2020年11月7日，引入28家投资者，采取新设合并方式设立的四川省首家省级法人城市商业银行。四川银行注册资本金300亿元，位居全国城市商业银行前列。</p>
+            
+            <!-- 右侧图片（总部）+ 注释 -->
+            <img src="{{ url_for('static', filename='images/5.jpg') }}" alt="四川银行总部" class="float-image image-right">
+            <div class="image-caption">四川银行总部</div>
+            
+            <p><strong>四川银行是四川省首家省级国有银行</strong>，四川银行攀枝花支行是四川银行在攀枝花地区的重要分支机构，攀枝花支行将紧紧围绕总行“十四五”规划及攀枝花市发展战略部署，秉承“扎根攀枝花、服务攀枝花、贡献攀枝花”的宗旨，充分利用四川银行特色产品和权益卡，让利于民，让利于企，为区域企业和市民提供特色化、差异化、多元化的金融服务。</p>
+            
+            <!-- 左侧图片（攀枝花支行）+ 注释 -->
+            <img src="{{ url_for('static', filename='images/6.jpg') }}" alt="四川银行攀枝花支行" class="float-image image-left">
+            <div class="image-caption">四川银行攀枝花支行</div>
+        </div>
+        
+        <!-- 底部信息栏 -->
+        <div class="bottom-info">
+            <img src="{{ url_for('static', filename='images/qr_code.jpg') }}" alt="四川银行二维码" class="qr-code">
+            <div class="info-text">
+                <p>地址：攀枝花市东区机场路88号</p>
+                <p>咨询电话：0818-6696678</p>
+            </div>
+        </div>
+        
+      
+    </div>
+</body>
+</html>
+    

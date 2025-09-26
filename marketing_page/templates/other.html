@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>其他业务咨询 - 四川银行攀枝花支行</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+            touch-action: manipulation;
+        }
+        body {
+            background-color: #f0f8f0;
+            color: #333;
+            padding: 15px;
+            padding-bottom: 30px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 10px 20px;
+            background-color: #4682b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .back-btn:active {
+            background-color: #3a6d98;
+        }
+        .back-btn i {
+            margin-right: 6px;
+        }
+        .subpage-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .subpage-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #2e4c6d;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        /* 业务分类：卡片布局，清晰直观 */
+        .business-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .business-item:last-child {
+            border-bottom: none;
+            margin-bottom: 10px;
+            padding-bottom: 0;
+        }
+        .business-name {
+            font-size: 17px;
+            font-weight: bold;
+            color: #4682b4;
+            margin-bottom: 10px;
+        }
+        .business-desc {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        /* 常见问题：折叠面板风格，节省空间 */
+        .faq-section {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .faq-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .faq-item {
+            margin-bottom: 12px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        .faq-question {
+            padding: 12px 15px;
+            background-color: #f8f8f8;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #fff;
+        }
+        .faq-answer.show {
+            padding: 12px 15px;
+            max-height: 500px;
+        }
+        .faq-icon {
+            color: #4682b4;
+            transition: transform 0.3s ease;
+        }
+        .faq-icon.show {
+            transform: rotate(180deg);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> 返回首页</a>
+    
+    <div class="subpage-container">
+        <h2 class="subpage-title">8、其他业务咨询</h2>
+        
+        <!-- 业务分类1：个人贷款 -->
+        <div class="business-item">
+            <h3 class="business-name">① 个人贷款业务</h3>
+            <div class="business-desc">
+                <p>四川银行达州大竹支行提供个人消费贷款、个人经营贷款、住房按揭贷款等产品：</p>
+                <p>- 个人消费贷款：最高20万元，用于装修、购车、旅游等，无需抵押，最快3天放款；</p>
+                <p>- 个人经营贷款：最高100万元，用于个体工商户经营周转，可提供房产抵押或信用方式；</p>
+                <p>- 住房按揭贷款：支持首套房、二套房贷款，首套房利率优惠，最长贷款期限30年。</p>
+                <p>咨询电话：消费贷款郭经理 18302361862</p>
+            </div>
+        </div>
+        
+        <!-- 业务分类2：手机银行/网上银行 -->
+        <div class="business-item">
+            <h3 class="business-name">② 手机银行/网上银行开通与使用</h3>
+            <div class="business-desc">
+                <p>携带本人身份证和银行卡到网点即可开通手机银行/网上银行，支持以下功能：</p>
+                <p>- 转账汇款：本行/跨行转账0手续费，实时到账；</p>
+                <p>- 生活缴费：电费、水费、燃气费、话费在线缴纳；</p>
+                <p>- 理财购买：在线购买存款、理财、基金等产品；</p>
+                <p>- 账户管理：查询余额、交易明细，挂失银行卡。</p>
+                <p>操作问题咨询：营业室 0818-6696678</p>
+            </div>
+        </div>
+        
+        <!-- 业务分类3：挂失与补卡 -->
+        <div class="business-item">
+            <h3 class="business-name">③ 银行卡挂失与补卡</h3>
+            <div class="business-desc">
+                <p>- 临时挂失：拨打四川银行客服热线96832（24小时）或通过手机银行挂失，有效期5天；</p>
+                <p>- 正式挂失与补卡：需携带本人身份证到网点办理，补卡工本费10元，一般当天可领新卡（特殊卡种需3-5个工作日）。</p>
+                <p>客服热线：96832（四川银行全省统一客服）</p>
+            </div>
+        </div>
+        
+        <!-- 常见问题：折叠面板 -->
+        <div class="faq-section">
+            <h3 class="faq-title">常见问题</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    手机银行转账提示“限额不足”怎么办？
+                    <i class="fa fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>手机银行默认转账限额为5万元/日，如需提高限额，可携带本人身份证和银行卡到网点办理限额调整，最高可调整至50万元/日（根据风险等级调整）。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    对公账户多久对账一次？
+                    <i class="fa fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>小微企业对公账户每月需对账1次，银行会在每月初发送对账短信或手机银行对账提醒，需在当月15日前完成对账（通过企业手机银行、网上银行或网点柜台），未按时对账可能影响账户使用。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    理财收益到账时间是什么时候？
+                    <i class="fa fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>不同理财产品收益到账时间不同：封闭式理财到期后1-3个工作日到账；开放式理财（如天天盈）赎回后T+1到账（T为赎回日，节假日顺延）；具体以产品说明书为准，可咨询理财经理郭经理（13778363123）。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 折叠面板JS：点击展开/收起答案 -->
+    <script>
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            answer.classList.toggle('show');
+            icon.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

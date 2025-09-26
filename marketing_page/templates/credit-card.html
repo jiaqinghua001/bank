@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>办理信用卡 - 四川银行攀枝花支行</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+            touch-action: manipulation;
+        }
+        body {
+            background-color: #f0f8f0;
+            color: #333;
+            padding: 15px;
+            padding-bottom: 30px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 10px 20px;
+            background-color: #4682b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .back-btn:active {
+            background-color: #3a6d98;
+        }
+        .back-btn i {
+            margin-right: 6px;
+        }
+        .subpage-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .subpage-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #2e4c6d;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        /* 信用卡类型：卡片布局，触摸友好 */
+        .card-type {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            transition: all 0.2s ease;
+        }
+        .card-type:active {
+            background-color: #f8f8f8;
+        }
+        .card-name {
+            font-size: 17px;
+            font-weight: bold;
+            color: #4682b4;
+            margin-bottom: 10px;
+        }
+        .card-benefit {
+            font-size: 15px;
+            line-height: 1.6;
+            list-style: none;
+            padding-left: 0;
+        }
+        .card-benefit li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .card-benefit li i {
+            color: #4682b4;
+            margin-right: 8px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        /* 申请条件和方式 */
+        .apply-section {
+            margin-top: 20px;
+        }
+        .apply-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .apply-content {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        /* 申请按钮：醒目，方便触摸 */
+        .apply-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4682b4;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .apply-btn:active {
+            background-color: #3a6d98;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> 返回首页</a>
+    
+    <div class="subpage-container">
+        <h2 class="subpage-title">6、办理信用卡</h2>
+        
+        <!-- 信用卡类型1：标准版 -->
+        <div class="card-type">
+            <h3 class="card-name">① 四川银行标准信用卡（银联版）</h3>
+            <ul class="card-benefit">
+                <li><i class="fa fa-check"></i> 全年免年费（无消费要求）</li>
+                <li><i class="fa fa-check"></i> 全国指定商户消费享8折优惠（餐饮、购物、观影）</li>
+                <li><i class="fa fa-check"></i> 每月1次atm跨行取款免手续费</li>
+                <li><i class="fa fa-check"></i> 最长56天免息期</li>
+            </ul>
+        </div>
+        
+        <!-- 信用卡类型2：车主版 -->
+        <div class="card-type">
+            <h3 class="card-name">② 四川银行车主信用卡（银联版）</h3>
+            <ul class="card-benefit">
+                <li><i class="fa fa-check"></i> 全年免年费（年消费满3笔即可）</li>
+                <li><i class="fa fa-check"></i> 每周五加油满200元立减30元（指定加油站）</li>
+                <li><i class="fa fa-check"></i> 免费赠送全年道路救援服务（100公里内）</li>
+                <li><i class="fa fa-check"></i> 积分可兑换加油卡、洗车服务</li>
+            </ul>
+        </div>
+        
+        <!-- 申请条件 -->
+        <div class="apply-section">
+            <h3 class="apply-title">申请条件</h3>
+            <div class="apply-content">
+                <p>1. 年龄18-65周岁，具有完全民事行为能力；</p>
+                <p>2. 有稳定工作或收入来源（需提供工作证明或收入证明）；</p>
+                <p>3. 个人信用记录良好（无逾期、欠款等不良记录）；</p>
+                <p>4. 本地居民需提供身份证+工作证明；外地居民需额外提供本地居住证明。</p>
+            </div>
+            
+            <h3 class="apply-title">申请方式</h3>
+            <div class="apply-content">
+                <p>1. 网点申请：携带身份证、工作证明到四川银行达州大竹支行网点填写申请表；</p>
+                <p>2. 线上申请：扫描下方二维码或通过四川银行手机银行“信用卡”频道申请（最快3个工作日出结果）。</p>
+            </div>
+            
+            <a href="tel:08186696678" class="apply-btn"><i class="fa fa-user"></i> 咨询营业室（0818-6696678）</a>
+        </div>
+    </div>
+</body>
+</html>

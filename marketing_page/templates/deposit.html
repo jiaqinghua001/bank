@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>定期宝存款产品 - 四川银行攀枝花支行</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+            touch-action: manipulation;
+        }
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+            color: #333;
+            padding: 15px;
+            padding-bottom: 30px;
+            min-height: 100vh;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 18px;
+            padding: 10px 20px;
+            background-color: #2e4c6d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 3px 8px rgba(46, 76, 109, 0.3);
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #3a6d98;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(46, 76, 109, 0.4);
+        }
+        .back-btn:active {
+            transform: translateY(0);
+        }
+        .bank-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: linear-gradient(90deg, #2e4c6d 0%, #4682b4 100%);
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .bank-logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .bank-name {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .subpage-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eaeaea;
+        }
+        .product-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #2e4c6d;
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .product-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #ffd700, #ff9900);
+            border-radius: 3px;
+        }
+        .product-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #4682b4;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        .product-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .deposit-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .deposit-table th {
+            background: linear-gradient(135deg, #2e4c6d 0%, #4682b4 100%);
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .deposit-table td {
+            padding: 14px 10px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+        }
+        .deposit-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .deposit-table tr:hover {
+            background-color: #f0f7ff;
+        }
+        .interest-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .disclaimer {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #fff9e6;
+            border-left: 4px solid #ffd700;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+        }
+        .phone-number {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2e4c6d;
+        }
+        .website {
+            font-size: 16px;
+            color: #4682b4;
+            text-decoration: none;
+        }
+        .consult-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #2e4c6d 0%, #4682b4 100%);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 25px;
+            box-shadow: 0 4px 12px rgba(70, 130, 180, 0.3);
+            transition: all 0.3s ease;
+        }
+        .consult-btn:hover {
+            background: linear-gradient(135deg, #4682b4 0%, #2e4c6d 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(70, 130, 180, 0.4);
+        }
+        .consult-btn:active {
+            transform: translateY(0);
+        }
+        .bank-slogan {
+            text-align: center;
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            .deposit-table th, .deposit-table td {
+                padding: 10px 5px;
+                font-size: 14px;
+            }
+            .product-title {
+                font-size: 24px;
+            }
+            .product-subtitle {
+                font-size: 16px;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> 返回首页</a>
+    
+    <div class="bank-header">
+        <div class="bank-logo">SCB</div>
+        <div class="bank-name">四川银行</div>
+    </div>
+    
+    <div class="subpage-container">
+        <h2 class="product-title">定期宝</h2>
+        <p class="product-subtitle">存款产品 | 最低<span class="product-highlight">50元</span>起存，年利率最高可达<span class="product-highlight">1.85%</span></p>
+        
+        <table class="deposit-table">
+            <thead>
+                <tr>
+                    <th>存款期限</th>
+                    <th>年利率</th>
+                    <th>起存金额</th>
+                    <th>存入10万为例</th>
+                    <th>存期满后利息收益</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>三个月</td>
+                    <td class="interest-highlight">1.10%</td>
+                    <td>50元</td>
+                    <td>275元</td>
+                    <td class="interest-highlight">275元</td>
+                </tr>
+                <tr>
+                    <td>六个月</td>
+                    <td class="interest-highlight">1.30%</td>
+                    <td>50元</td>
+                    <td>650元</td>
+                    <td class="interest-highlight">650元</td>
+                </tr>
+                <tr>
+                    <td>一年期</td>
+                    <td class="interest-highlight">1.40%</td>
+                    <td>50元</td>
+                    <td>1400元</td>
+                    <td class="interest-highlight">1400元</td>
+                </tr>
+                <tr>
+                    <td>两年期</td>
+                    <td class="interest-highlight">1.50%</td>
+                    <td>1000元</td>
+                    <td>3000元</td>
+                    <td class="interest-highlight">3000元</td>
+                </tr>
+                <tr>
+                    <td>三年期</td>
+                    <td class="interest-highlight">1.85%</td>
+                    <td>5000元</td>
+                    <td>5550元</td>
+                    <td class="interest-highlight">5550元</td>
+                </tr>
+                <tr>
+                    <td>五年期</td>
+                    <td class="interest-highlight">1.85%</td>
+                    <td>10000元</td>
+                    <td>9250元</td>
+                    <td class="interest-highlight">9250元</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="disclaimer">
+            <p><strong>温馨提示：</strong>本月我们为宣传周，不作为任何法律文件、组织和权限参考，适用完整按揭地区，如遇有调整，请以存入时务代表为准。</p>
+        </div>
+        
+        <div class="contact-info">
+            <div class="phone-number"><i class="fas fa-phone"></i> 96096117324</div>
+            <div class="phone-number"><i class="fas fa-phone"></i> 400-10-96998</div>
+            <a href="http://www.cebank.cn" class="website" target="_blank"><i class="fas fa-globe"></i> www.cebank.cn</a>
+        </div>
+        
+        <a href="tel:96096117324" class="consult-btn"><i class="fas fa-phone-alt"></i> 立即咨询存款详情</a>
+        
+        <p class="bank-slogan">好雨知时，润物无声</p>
+    </div>
+    
+    <script>
+        // 添加简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 表格行点击效果
+            const tableRows = document.querySelectorAll('.deposit-table tr');
+            tableRows.forEach(row => {
+                row.addEventListener('click', function() {
+                    tableRows.forEach(r => r.style.backgroundColor = '');
+                    this.style.backgroundColor = '#e6f7ff';
+                });
+            });
+            
+            // 咨询按钮点击效果
+            const consultBtn = document.querySelector('.consult-btn');
+            consultBtn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 移动端适配：禁止缩放，适配手机屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>开立对公账户资料 - 四川银行攀枝花支行</title>
+    <style>
+        /* 全局样式重置与基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+            touch-action: manipulation; /* 防止移动端误触缩放 */
+        }
+        body {
+            background-color: #f0f8f0;
+            color: #333;
+            padding: 15px;
+            padding-bottom: 30px; /* 底部留空，避免内容被手机底部导航遮挡 */
+        }
+        /* 返回首页按钮样式 */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 10px 20px;
+            background-color: #4682b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s;
+        }
+        .back-btn:active {
+            background-color: #3a6d98; /* 点击时深色反馈 */
+        }
+        .back-btn i {
+            margin-right: 6px; /* 图标与文字间距 */
+        }
+        /* 内容容器：居中、白色背景、圆角阴影 */
+        .subpage-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        /* 页面标题样式 */
+        .subpage-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #2e4c6d;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        /* 正文基础样式 */
+        .subpage-content {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        /* 资料分类标题：蓝色、加粗 */
+        .doc-type {
+            font-size: 17px;
+            font-weight: bold;
+            color: #4682b4;
+            margin: 20px 0 12px; /* 上下间距，区分不同分类 */
+        }
+        /* 资料列表：项目符号、左缩进 */
+        .doc-list {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .doc-list li {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 8px; /* 列表项之间间距 */
+        }
+        /* 办理流程区域：顶部边框分隔 */
+        .process-section {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #eee; /* 与资料区分隔 */
+        }
+        .process-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        /* 流程步骤：数字+文字横向排列 */
+        .process-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .process-item {
+            display: flex;
+            align-items: flex-start; /* 数字与文字顶部对齐 */
+            margin-bottom: 15px; /* 步骤之间间距 */
+        }
+        /* 流程数字：圆形蓝色背景 */
+        .process-num {
+            width: 24px;
+            height: 24px;
+            background-color: #4682b4;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px; /* 垂直居中 */
+            font-size: 14px;
+            margin-right: 10px;
+            flex-shrink: 0; /* 防止数字框被压缩 */
+        }
+        .process-text {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        /* 咨询按钮：全屏宽度、蓝色背景 */
+        .consult-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4682b4;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s;
+        }
+        .consult-btn:active {
+            background-color: #3a6d98; /* 点击深色反馈 */
+        }
+        /* 备注信息：灰色小字体 */
+        .remark {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+    </style>
+    <!-- 引入字体图标（返回按钮箭头） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 返回首页按钮：带箭头图标 -->
+    <a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> 返回首页</a>
+    
+    <!-- 核心内容容器 -->
+    <div class="subpage-container">
+        <!-- 页面标题 -->
+        <h2 class="subpage-title">7、开立对公账户资料</h2>
+        
+        <!-- 正文内容 -->
+        <div class="subpage-content">
+            <!-- 第一类：企业基础资料 -->
+            <h3 class="doc-type">一、企业基础资料（必备）</h3>
+            <ul class="doc-list">
+                <li>营业执照正本及复印件（加盖企业公章，复印件需清晰可辨）</li>
+                <li>营业执照副本及复印件（加盖企业公章，副本需在有效期内）</li>
+                <li>公司章程（需包含全体股东签字页、章程修订页，加盖企业公章）</li>
+                <li>法定代表人身份证明文件：身份证原件及正反面复印件（复印件加盖公章）</li>
+                <li>企业公章、财务专用章、法定代表人私章（开户时需现场核验印章样式）</li>
+            </ul>
+
+            <!-- 第二类：股东及经办人资料 -->
+            <h3 class="doc-type">二、股东及经办人资料（根据实际情况提供）</h3>
+            <ul class="doc-list">
+                <li>自然人股东：身份证原件及正反面复印件（持股比例≥20%需提供，复印件加盖公章）</li>
+                <li>法人股东：营业执照正本复印件+法人股东公章+法定代表人身份证复印件（加盖法人股东公章）</li>
+                <li>开户经办人：身份证原件及正反面复印件（非法定代表人办理时需提供，复印件加盖公章）</li>
+                <li>《授权委托书》（非法定代表人办理时需提供，需法定代表人签字并加盖企业公章）</li>
+            </ul>
+
+            <!-- 第三类：账户用途证明 -->
+            <h3 class="doc-type">三、账户用途证明材料（任选1项）</h3>
+            <ul class="doc-list">
+                <li>真实有效的业务合同（如供销合同、服务协议等，需包含双方盖章页、金额条款）</li>
+                <li>企业经营场所证明（如租赁合同、房产证复印件，加盖企业公章）</li>
+                <li>纳税证明（近3个月增值税/企业所得税缴纳凭证，加盖企业公章）</li>
+                <li>社保缴纳证明（近1个月企业社保缴费凭证，加盖企业公章）</li>
+            </ul>
+
+            <!-- 办理流程 -->
+            <div class="process-section">
+                <h3 class="process-title">四、开户办理流程</h3>
+                <ul class="process-list">
+                    <li class="process-item">
+                        <span class="process-num">1</span>
+                        <span class="process-text">提前预约：拨打四川银行攀枝花支行对公客户经理电话（0812-XXXXXXX），预约开户时间</span>
+                    </li>
+                    <li class="process-item">
+                        <span class="process-num">2</span>
+                        <span class="process-text">现场提交：携带上述所有资料到支行营业部（地址：攀枝花市XX区XX路XX号）提交材料，填写开户申请表</span>
+                    </li>
+                    <li class="process-item">
+                        <span class="process-num">3</span>
+                        <span class="process-text">审核核验：银行审核资料真实性，核验印章样式，完成法人面签（部分情况可远程面签）</span>
+                    </li>
+                    <li class="process-item">
+                        <span class="process-num">4</span>
+                        <span class="process-text">账户激活：审核通过后（通常1-3个工作日），银行通知领取开户许可证，账户即可正常使用</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 备注信息 -->
+            <div class="remark">
+                <p>★ 备注：</p>
+                <p>1. 所有复印件需使用A4纸张，加盖企业公章（公章需清晰完整，覆盖文字内容）；</p>
+                <p>2. 若企业为“多证合一”后新设企业，无需提供税务登记证、组织机构代码证；</p>
+                <p>3. 开户前可联系客户经理确认资料清单，避免遗漏（联系电话：0812-XXXXXXX）。</p>
+            </div>
+
+            <!-- 咨询按钮 -->
+            <a href="tel:0812XXXXXXX" class="consult-btn"><i class="fa fa-phone"></i> 立即拨打客户经理咨询</a>
+        </div>
+    </div>
+</body>
+</html>

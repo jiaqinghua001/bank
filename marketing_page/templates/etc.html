@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>办理ETC - 四川银行攀枝花支行</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+            touch-action: manipulation;
+        }
+        body {
+            background-color: #f0f8f0;
+            color: #333;
+            padding: 15px;
+            padding-bottom: 30px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 10px 20px;
+            background-color: #4682b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .back-btn:active {
+            background-color: #3a6d98;
+        }
+        .back-btn i {
+            margin-right: 6px;
+        }
+        .subpage-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .subpage-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #2e4c6d;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .subpage-content {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        /* ETC二维码：居中显示，大小合适 */
+        .etc-qr {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto 20px;
+            display: block;
+            border: 1px solid #eee;
+            padding: 10px;
+            background-color: #fff;
+        }
+        /* 办理条件：列表清晰，重点突出 */
+        .etc-condition {
+            margin: 25px 0;
+        }
+        .condition-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #4682b4;
+        }
+        .condition-list {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .condition-list li {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+        /* 安装说明：浅色背景，醒目 */
+        .install-note {
+            background-color: #f8f8f8;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <a href="/" class="back-btn"><i class="fa fa-arrow-left"></i> 返回首页</a>
+    
+    <div class="subpage-container">
+        <h2 class="subpage-title">5、办理ETC</h2>
+        
+        <div class="subpage-content">
+            <p>四川银行ETC支持全国高速公路通行，川籍车辆可在线办理，设备免费送，全国过路费9.5折，无需到网点，在家即可完成申请。</p>
+            <p>持有我行任一银行卡（储蓄卡/信用卡）且为川牌的客户，扫描下方二维码即可申请，申请后设备免费邮寄到家，自行安装或预约上门安装。</p>
+        </div>
+        
+        <!-- ETC办理二维码 -->
+        <img src="{{ url_for('static', filename='images/etc-qr.jpg') }}" alt="四川银行ETC办理二维码" class="etc-qr">
+        
+        <!-- 办理条件 -->
+        <div class="etc-condition">
+            <h3 class="condition-title">办理条件</h3>
+            <ul class="condition-list">
+                <li>车辆牌照为四川省内（川A-川Z）</li>
+                <li>申请人需持有四川银行储蓄卡或信用卡（需正常使用）</li>
+                <li>需提供车辆行驶证照片（正副页）、申请人身份证照片</li>
+                <li>单位车辆需额外提供营业执照照片、法人身份证照片</li>
+            </ul>
+        </div>
+        
+        <!-- 安装说明 -->
+        <div class="install-note">
+            <p><i class="fa fa-info-circle" style="color: #4682b4; margin-right: 5px;"></i> 安装说明：设备邮寄后，可扫描包装内的安装指南二维码查看安装视频，或到攀枝花分行营业部进行免费安装。</p>
+        </div>
+    </div>
+</body>
+</html>
